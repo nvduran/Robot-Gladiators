@@ -44,22 +44,25 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
       window.alert(playerName + " still has " + playerHealth + " health left.");
     }
     // if player choses to skip
-  } else if (promptFight === "skip" || promptFight === "SKIP") {
+}else if (promptFight === "skip" || promptFight === "SKIP") {
     // confirm player wants to skip
     var confirmSkip = window.confirm("Are you sure you'd like to quit?");
   
-        // if yes (true), leave fight
-        if (confirmSkip) {
-          window.alert(playerName + " has decided to skip this fight. Goodbye!");
-          // subtract money from playerMoney for skipping
-          playerMoney = playerMoney - 2;
-        }
-        // if no (false), ask question again by running fight() again
-        else {
-          fight();
-        }
+    // if yes (true), leave fight
+    if (confirmSkip) {
+      window.alert(playerName + " has decided to skip this fight. Goodbye!");
+      // subtract money from playerMoney for skipping
+      playerMoney = playerMoney - 2;
+    }
+    // if no (false), ask question again by running fight() again
+    else {
+      fight();
+    }
   }
-    
+else {
+    window.alert("You need to choose a valid option. Try again!");
+  }
+  
   };
 
   fight();
