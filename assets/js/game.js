@@ -32,7 +32,7 @@ var startGame = function() {
     }
     // if player is not alive, break out of the loop and let endGame function run
     else {
-      break;
+    break;
     }
   }
 
